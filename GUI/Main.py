@@ -21,7 +21,7 @@ class CamShow(QMainWindow, Ui_LookAtYou):
         self.cap2 = cv2.VideoCapture()
         self.CAM_NUM1 = '1.mp4'  # 为0时表示视频流来自笔记本内置摄像头
         self.CAM_NUM2 = 0
-        self.out=cv2.VideoWriter
+        self.out = cv2.VideoWriter
 
         self.setupUi(self)  # 初始化界面
         self.slot_init()  # 初始化槽函数
@@ -59,7 +59,7 @@ class CamShow(QMainWindow, Ui_LookAtYou):
             self.video.clear()  # 清空视频显示区域
             self.video_2.clear()
             self.start.setText('开始')
-    
+
     def show_camera(self, Video: QLabel, cap):  # video参数可以放不同的窗口界面，cap参数是不同的视频流
         flag, self.image = cap.read()  # 从视频流中读取
         show = cv2.resize(self.image, (640, 480))  # 把读到的帧的大小重新设置为 640x480
