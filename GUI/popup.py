@@ -2,10 +2,10 @@ from PyQt5.QtWidgets import *
 
 import sys
 
+
 class popup(QMainWindow):
 
     def __init__(self):
-
         super().__init__()
 
         self.setWindowTitle("主窗口")
@@ -17,21 +17,20 @@ class popup(QMainWindow):
         self.child_window = Child()
 
     def show_child(self):
-
         self.child_window.show()
+
 
 class Child(QWidget):
 
     def __init__(self):
-
         super().__init__()
 
         self.setWindowTitle("我是子窗口啊")
 
         # 运行主窗口
 
-if __name__ == "__main__":
 
+if __name__ == "__main__":
     app = QApplication(sys.argv)
 
     window = popup()
